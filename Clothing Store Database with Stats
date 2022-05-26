@@ -33,7 +33,7 @@ SELECT item, MAX(price) FROM clothing_store;
 --what is the least expensive item in the store?
 SELECT item, MIN(price) FROM clothing_store;
 
--what is the average price of all items in the store?
+--what is the average price of all items in the store?
 SELECT ROUND(AVG(price), 2) FROM clothing_store;
 
 --(Assuming more quantity means an item is being bought less) What are the top 5 least popular items?
