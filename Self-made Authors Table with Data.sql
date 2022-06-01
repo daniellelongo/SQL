@@ -30,8 +30,8 @@ INSERT INTO books (title, release, pages, author_id) VALUES ("Game of Thrones", 
 INSERT INTO books (title, release, pages, author_id) VALUES ("Fire and Blood", 2018, 736, 6);
 INSERT INTO books (title, release, pages, author_id) VALUES ("A Dance with Dragons", 2011, 1016, 6);
 
---Display all authors and their corresponding books.
-SELECT authors.fullname AS author, books.title as books_written FROM authors INNER JOIN books ON authors.id = books.author_id;
+--Display all authors and their corresponding books including their length.
+SELECT authors.fullname AS author, books.title as books_written, books.pages AS pages FROM authors INNER JOIN books ON authors.id = books.author_id;
 
 --Display the author and titles of all books that start with the word "The".
 SELECT authors.fullname AS author, books.title as books_written FROM authors INNER JOIN books ON authors.id = books.author_id WHERE books.title LIKE "The%";
