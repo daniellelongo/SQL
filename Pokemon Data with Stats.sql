@@ -12,8 +12,8 @@ SELECT MIN(Total) FROM pokemon;
 SELECT ROUND(AVG(Total)) FROM pokemon;
 
 --Using the average total stats for all pokemon found previously, group together the primary pokemon types that have pokemon whose average total stats that are higher and lower than the general average.
-SELECT Type_1, ROUND(AVG(Total)) as average_type_stat_greater FROM pokemon GROUP BY Type_1 HAVING average_type_stat_greater > 435;
-SELECT Type_1, ROUND(AVG(Total)) as average_type_stat_less FROM pokemon GROUP BY Type_1 HAVING average_type_stat_less < 435;
+SELECT Type_1, ROUND(AVG(Total)) as average_type_stat_greater FROM pokemon GROUP BY Type_1 HAVING average_type_stat_greater > (SELECT ROUND(AVG(Total)) FROM pokemon);
+SELECT Type_1, ROUND(AVG(Total)) as average_type_stat_less FROM pokemon GROUP BY Type_1 HAVING average_type_stat_less < (SELECT ROUND(AVG(Total)) FROM pokemon);
 
 --How many pokemon can be grouped into each of Smogon's fundamental usage-based tiers based on their overall stats (Does not have to match smogens categorization) 
 SELECT COUNT(*),
