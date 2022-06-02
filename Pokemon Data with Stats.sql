@@ -13,7 +13,9 @@ WHERE Legendary ="True";
 
 --What is the highest, lowest and average total stats for ALL pokemon.
 SELECT MAX(Total) FROM pokemon; 
+
 SELECT MIN(Total) FROM pokemon; 
+
 SELECT ROUND(AVG(Total)) FROM pokemon;
 
 --Using the average total stats for all pokemon found previously, group together the primary pokemon types that have pokemon whose average total stats that are higher and lower than the general average.
