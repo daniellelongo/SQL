@@ -41,8 +41,9 @@ SELECT ROUND(((AVG(duration_ms)/1000)/60),2) AS duration_mins FROM BIT_DB.Spotif
 --How many songs feature another artist? 
 SELECT COUNT(track_name) FROM BIT_DB.SpotifyData WHERE track_name LIKE '%feat.%';
 
---which artist has the most danceable song?
+--which artist has the most/least danceable song?
 SELECT artist_name, track_name, MAX(danceability) FROM BIT_DB.SpotifyData;
+SELECT artist_name, track_name, MIN(danceability) FROM BIT_DB.SpotifyData;
 
 --Top 5 songs with higher than average loudness?
 SELECT track_name, loudness FROM BIT_DB.SpotifyData
