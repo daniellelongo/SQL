@@ -3,7 +3,7 @@
 --Here I will create and answer questions regarding this data:
 
 
---Show Customers (their full names, customer ID, and country) who are not in the US. (Hint: != or <> can be used to say "is not equal to").
+--Show Customers (their full names, customer ID, and country) who are not in the US. 
 SELECT FirstName, LastName, CustomerId, Country FROM chinook.customers 
 WHERE COUNTRY != 'USA';
 
