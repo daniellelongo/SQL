@@ -60,6 +60,30 @@ SELECT customer_id FROM payment
 WHERE amount != 0 
 ORDER BY payment_date ASC LIMIT 10;
 
+-- We want to know and compare the amount of films we have per movie rating.
+SELECT 
+SUM(
+CASE rating
+	WHEN 'PG' THEN 1 ELSE 0
+	END
+) AS "PG",
+SUM(
+CASE rating
+	WHEN 'PG-13' THEN 1 ELSE 0
+	END
+) AS "PG-13",
+SUM(
+CASE rating
+	WHEN 'R' THEN 1 ELSE 0
+	END
+) AS "R",
+SUM(
+CASE rating
+	WHEN 'NC-17' THEN 1 ELSE 0
+	END
+) AS "NC-17"
+FROM film;
+
 -- What are the customer ids of customers who have spent more than $100 in payment transactions with our staff member with staff ID of 2?
 SELECT customer_id, SUM(amount) FROM payment 
 WHERE staff_id = 2 
