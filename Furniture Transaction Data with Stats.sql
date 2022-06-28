@@ -12,17 +12,17 @@ SELECT product, price, MIN(price) FROM sales;
 --Average price in all transactions
 SELECT AVG(price) FROM sales;
 
---Which countries have had transaction prices totalling over 5000?
-SELECT country, SUM(price) FROM sales GROUP BY country HAVING SUM(price) > 5000;
+--Total sales in each country
+SELECT country, SUM(price) AS total_sales FROM sales GROUP BY country;
 
---What are the top 5 credit card payment types with the highest number of transactions per country
-SELECT country, payment_type, COUNT(payment_type) FROM sales GROUP BY country, payment_type ORDER BY COUNT(payment_type) DESC LIMIT 5;
+--Top five countries with the highest total sales?
+SELECT country, SUM(price) FROM sales GROUP BY country ORDER BY SUM(price) DESC LIMIT 5;
 
---What is the total price of all transactions from each payment type?
+--Display the number of transactions for each payment type
+SELECT payment_type, COUNT(payment_type) FROM sales GROUP BY  payment_type ORDER BY COUNT(payment_type) DESC
+
+--What is the total sales of all transactions from each payment type?
 SELECT payment_type, SUM(price) FROM sales GROUP BY payment_type;
 
---Display all transactions that occurred using a Diners payment type in the United States
-SELECT * FROM sales WHERE payment_type = "Diners" AND price > (SELECT MIN(price) FROM sales);
-
---Display the average price in all transactions from the cities including their states, in United States 
-SELECT city, state, AVG(price) FROM sales WHERE country = "United states" GROUP BY city;
+--Display the total sales in all transactions from the cities including their states, in United States 
+SELECT city, state, SUM(price) FROM sales WHERE country = "United states" GROUP BY city;
