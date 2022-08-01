@@ -1,4 +1,4 @@
---In this SQL code, I'm querying a database that's holding Nexflix data to answer questions about the data. 
+--In this SQL code, I'm querying a database that contains Nexflix data to answer questions about the data. 
 
 --How many movie titles are there in the database? (movies only, not tv shows) 
 SELECT COUNT(*) FROM "CharlotteChaze/BreakIntoTech"."netflix_titles_info" WHERE type = 'Movie';
