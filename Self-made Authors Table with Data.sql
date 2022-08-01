@@ -1,5 +1,5 @@
 --Create your own Table consisting of some small set of “famous people”, then make more tables about things they do and join them.
---I did authors and their books
+--I gathered information about popular authors and a handful of their popular books and used this data to create a database.
 
 CREATE TABLE authors(id INTEGER PRIMARY KEY AUTOINCREMENT, fullname TEXT, nationality TEXT, age INTEGER, books_written INTEGER, books_sold INTEGER);
 
