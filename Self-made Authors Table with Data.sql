@@ -34,20 +34,32 @@ INSERT INTO books (title, release, pages, author_id) VALUES ("A Dance with Drago
 --Used the data I collected and created SQL queries to pull relevent information.
 
 --Display all authors and their corresponding books including their length.
-SELECT authors.fullname AS author, books.title as books_written, books.pages AS pages FROM authors INNER JOIN books ON authors.id = books.author_id;
+SELECT authors.fullname AS author, books.title as books_written, books.pages AS pages FROM authors INNER JOIN books 
+ON authors.id = books.author_id;
 
 --Display the author and titles of all books that start with the word "The".
-SELECT authors.fullname AS author, books.title as books_written FROM authors INNER JOIN books ON authors.id = books.author_id WHERE books.title LIKE "The%";
+SELECT authors.fullname AS author, books.title as books_written FROM authors INNER JOIN books 
+ON authors.id = books.author_id WHERE books.title LIKE "The%";
 
 --What is the name of the author and the book with the most/least pages?
-SELECT authors.fullname, books.title, MAX(books.pages) AS pages FROM authors INNER JOIN books ON authors.id = books.author_id;
-SELECT authors.fullname, books.title, MIN(books.pages) AS pages FROM authors INNER JOIN books ON authors.id = books.author_id;
+SELECT authors.fullname, books.title, MAX(books.pages) AS pages FROM authors INNER JOIN books 
+ON authors.id = books.author_id;
+SELECT authors.fullname, books.title, MIN(books.pages) AS pages FROM authors INNER JOIN books 
+ON authors.id = books.author_id;
 
 --What are the names of the authors and their corresponding book that were released after 2010?
-SELECT authors.fullname, books.title, books.release FROM authors INNER JOIN books ON authors.id = books.author_id WHERE books.release > 2010; 
+SELECT authors.fullname, books.title, books.release FROM authors INNER JOIN books 
+ON authors.id = books.author_id 
+WHERE books.release > 2010; 
 
 --Which 2 authors on average write the wordiest books?
-SELECT authors.fullname, ROUND(AVG(books.pages)) as total_pages FROM authors INNER JOIN books ON authors.id = books.author_id GROUP BY authors.fullname ORDER BY total_pages DESC LIMIT 2;
+SELECT authors.fullname, ROUND(AVG(books.pages)) as total_pages FROM authors INNER JOIN books 
+ON authors.id = books.author_id 
+GROUP BY authors.fullname ORDER BY total_pages DESC LIMIT 2;
+
+--Which author sold the most books?
+SELECT fullname, books_sold FROM authors 
+ORDER BY books_sold DESC LIMIT 1;
 
 
 
