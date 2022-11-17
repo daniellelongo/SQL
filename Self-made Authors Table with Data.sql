@@ -1,4 +1,4 @@
---Create your own Table consisting of some small set of “famous people”, then make more tables about things they do and join them.
+
 --I gathered information about popular authors and a handful of their popular books and used this data to create a database.
 
 CREATE TABLE authors(id INTEGER PRIMARY KEY AUTOINCREMENT, fullname TEXT, nationality TEXT, age INTEGER, books_written INTEGER, books_sold INTEGER);
@@ -30,6 +30,8 @@ INSERT INTO books (title, release, pages, author_id) VALUES ("The Trespasser", 2
 INSERT INTO books (title, release, pages, author_id) VALUES ("Game of Thrones", 1996, 694, 6);
 INSERT INTO books (title, release, pages, author_id) VALUES ("Fire and Blood", 2018, 736, 6);
 INSERT INTO books (title, release, pages, author_id) VALUES ("A Dance with Dragons", 2011, 1016, 6);
+
+--Used the data I collected and created SQL queries to pull relevent information.
 
 --Display all authors and their corresponding books including their length.
 SELECT authors.fullname AS author, books.title as books_written, books.pages AS pages FROM authors INNER JOIN books ON authors.id = books.author_id;
