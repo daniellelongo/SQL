@@ -1,4 +1,4 @@
---In this SQL, I'm querying a database with multiple tables in it to quantify statistics about customer and order data. 
+--SQL queries that quantify statistics about customer and order data. 
 
 --How many orders were placed in January? 
 SELECT COUNT(*) FROM BIT_DB.JanSales
