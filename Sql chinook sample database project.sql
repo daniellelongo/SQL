@@ -1,6 +1,6 @@
 --This sample database represents a digital media store, including tables for artists, albums, media tracks, invoices, and customers.
 
---Here I will create and answer questions regarding this data:
+--Here I will create questions and use SQL queries to provide insight.
 
 
 --Show Customers (their full names, customer ID, and country) who are not in the US. 
