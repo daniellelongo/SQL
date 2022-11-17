@@ -15,10 +15,9 @@ INSERT INTO facebook_clone(fullname, age, job, relationship, status) VALUES ("An
 
 --Make a table to store the data.
 --Add a few example rows in the table.
---Display all initial data
---Emulate what happens when you edit data in the app.
---Emulate what happens when you delete data in the app.
---Display all data again after changes
+--Display all initial data.
+--Emulate what happens when you edit and delete data in the app.
+--Display all data again after changes.
 
 SELECT * FROM facebook_clone;
 
