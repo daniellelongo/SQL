@@ -1,7 +1,7 @@
 --In this scenario I will be a SQL consultant for a vacation resort.
 --The database consists of three tables, one for booking, one for facilities and one for members.
 
---The following tasks/queries will reflect what could be asked of me as a SQL consultant in this work environment:
+--The following queries will reflect what could be asked of me as a SQL consultant in this work environment:
 
 --Retrieve all information about the facilities.
 SELECT * FROM cd.facilities;
