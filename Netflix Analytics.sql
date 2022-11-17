@@ -13,7 +13,7 @@ SELECT title, type FROM "CharlotteChaze/BreakIntoTech"."netflix_titles_info" ORD
 SELECT director FROM "CharlotteChaze/BreakIntoTech"."netflix_people" AS people LEFT JOIN "CharlotteChaze/BreakIntoTech"."netflix_titles_info" AS title 
 ON people.show_id = title.show_id WHERE title.title = 'Bright Star';
 
---What is the oldest movie in the database and what year was it made? 
+--What is the oldest movie in the database? 
 SELECT title, MIN(release_year) FROM "CharlotteChaze/BreakIntoTech"."netflix_titles_info" WHERE type ='Movie'
 GROUP BY title, release_year ORDER BY release_year ASC LIMIT 1;
 
