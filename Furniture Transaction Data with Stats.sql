@@ -16,7 +16,10 @@ SELECT AVG(price) FROM sales;
 SELECT country, SUM(price) AS total_sales FROM sales GROUP BY country;
 
 --Top five countries with the highest total sales?
-SELECT country, SUM(price) FROM sales GROUP BY country ORDER BY SUM(price) DESC LIMIT 5;
+SELECT country, SUM(price) as total_sales FROM sales GROUP BY country ORDER BY SUM(price) DESC LIMIT 5;
+
+--Least profitable country?
+SELECT country, SUM(price) as total_sales FROM sales GROUP BY country ORDER BY SUM(price) ASC LIMIT 1;
 
 --Display the number of transactions for each payment type
 SELECT payment_type, COUNT(payment_type) FROM sales GROUP BY  payment_type ORDER BY COUNT(payment_type) DESC
