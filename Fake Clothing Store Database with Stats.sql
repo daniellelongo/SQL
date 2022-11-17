@@ -18,13 +18,13 @@ INSERT INTO clothing_store VALUES(13,"Shorts", 27, 35.89, 7);
 INSERT INTO clothing_store VALUES(14,"Jeans", 30, 50.15, 7);
 INSERT INTO clothing_store VALUES(15,"Long Pants", 7, 48.62, 7);
 
---display the database ordered by price.
+--display all data ordered by price.
 SELECT * FROM clothing_store ORDER BY price ASC;
 
 --Which items and their prices are in the first 3 aisles?
 SELECT item, price FROM clothing_store WHERE aisle IN (1,2,3) ORDER BY price ASC;
 
---which which aisles hold items that are more than 50 dollars?
+--which aisles hold items that are more than 50 dollars?
 SELECT aisle, item FROM clothing_store WHERE price > 50.00 GROUP BY item; 
 
 --what is the most expensive item in the store?
