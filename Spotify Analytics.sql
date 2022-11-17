@@ -1,4 +1,4 @@
---For this project, I downloaded Spotify data from Kaggle, created a table to insert the Spotify data into and performed analytics on the data using SQL. 
+--For this project, I downloaded Spotify data from Kaggle, created a table and inserted the Spotify data and performed analytics on the data using SQL. 
 
 --Using the pre-existing columns in the data from kaggle, I created a table and added relevent data types and constraints.
 
