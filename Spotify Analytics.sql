@@ -35,7 +35,7 @@ ORDER BY popularity DESC LIMIT 10;
 SELECT track_name, MAX(energy) FROM BIT_DB.SpotifyData;
 SELECT track_name, MIN(energy) FROM BIT_DB.SpotifyData;
 
---what is the average length of song in minutes
+--what is the average length of song in minutes?
 SELECT ROUND(((AVG(duration_ms)/1000)/60),2) AS duration_mins FROM BIT_DB.SpotifyData;
 
 --How many songs feature another artist? 
@@ -51,4 +51,24 @@ WHERE loudness > (SELECT AVG(loudness) FROM BIT_DB.SpotifyData)
 ORDER BY loudness DESC LIMIT 5;
 
 --Which song involves the most spoken words?
-SELECT track_name, MAX(speechiness) FROM BIT_DB.SpotifyData; 
+SELECT track_name, MAX(speechiness) FROM BIT_DB.SpotifyData;
+
+--Show the popularity of each individual song along with the overall average popularity of the artist.
+SELECT artist_name, track_name, popularity,
+AVG(popularity) OVER (PARTITION BY artist_name) AS "avg_popularity"
+FROM SpotifyData;
+
+--Label all artists with an average of 90 and up as "Top star".
+WITH popularity_average AS (
+  
+SELECT artist_name,
+AVG(popularity) AS average_popularity
+FROM SpotifyData
+GROUP BY artist_name
+)
+
+SELECT  artist_name, average_popularity, 'Top Star' AS tag
+FROM popularity_average
+WHERE average_popularity>=90;
+
+
