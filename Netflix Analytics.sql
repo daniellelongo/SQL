@@ -6,7 +6,8 @@ WHERE type = 'Movie';
 
 --When was the most recent batch of tv shows and/or movies added to the database? 
 SELECT DATE(date_added) FROM "CharlotteChaze/BreakIntoTech"."netflix_titles_info" 
-WHERE date_added IS NOT NULL ORDER BY date_added DESC LIMIT 1;
+WHERE date_added IS NOT NULL 
+ORDER BY date_added DESC LIMIT 1;
 
 --List all the movies and tv shows in alphabetical order. 
 SELECT title, type FROM "CharlotteChaze/BreakIntoTech"."netflix_titles_info" 
