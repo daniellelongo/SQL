@@ -39,7 +39,8 @@ SELECT track_name, MIN(energy) FROM BIT_DB.SpotifyData;
 SELECT ROUND(((AVG(duration_ms)/1000)/60),2) AS duration_mins FROM BIT_DB.SpotifyData;
 
 --How many songs feature another artist? 
-SELECT COUNT(track_name) FROM BIT_DB.SpotifyData WHERE track_name LIKE '%feat.%';
+SELECT COUNT(track_name) FROM BIT_DB.SpotifyData 
+WHERE track_name LIKE '%feat.%';
 
 --which artist has the most/least danceable song?
 SELECT artist_name, track_name, MAX(danceability) FROM BIT_DB.SpotifyData;
@@ -69,6 +70,6 @@ GROUP BY artist_name
 
 SELECT  artist_name, average_popularity, 'Top Star' AS tag
 FROM popularity_average
-WHERE average_popularity>=90;
+WHERE average_popularity >= 90;
 
 
