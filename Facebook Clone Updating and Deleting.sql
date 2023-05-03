@@ -21,21 +21,28 @@ INSERT INTO facebook_clone(fullname, age, job, relationship, status) VALUES ("An
 
 SELECT * FROM facebook_clone;
 
-UPDATE facebook_clone SET age = 25, status = "IT'S MY BIRTHDAY!" WHERE id= 3;
+UPDATE facebook_clone SET age = 25, status = "IT'S MY BIRTHDAY!" 
+WHERE id= 3;
 
-UPDATE facebook_clone SET relationship = "Married" WHERE id = 7;
+UPDATE facebook_clone SET relationship = "Married" 
+WHERE id = 7;
 
-UPDATE facebook_clone SET status = "IM FINALLY MARRIED! TOOK LONG ENOUGH! HAHA" WHERE id = 7;
+UPDATE facebook_clone SET status = "IM FINALLY MARRIED! TOOK LONG ENOUGH! HAHA" 
+WHERE id = 7;
 
-UPDATE facebook_clone SET job = "Data Analyst" WHERE id = 2;
+UPDATE facebook_clone SET job = "Data Analyst" 
+WHERE id = 2;
 
-UPDATE facebook_clone SET status = "My hard work paid off! I got a job that I fully taught to do on my own! So proud of me lol" WHERE id = 2;
+UPDATE facebook_clone SET status = "My hard work paid off! I got a job that I fully taught to do on my own! So proud of me lol" 
+WHERE id = 2;
 
-UPDATE facebook_clone SET status = "I'm done with social media.. Goodbye facebook clone!" WHERE id = 4;
+UPDATE facebook_clone SET status = "I'm done with social media.. Goodbye facebook clone!" 
+WHERE id = 4;
 
 DELETE FROM facebook_clone WHERE id =  4;
 
-UPDATE facebook_clone SET status = "I hear there are a lot of hackers on this app! I don't want to risk them getting my information so I'm deleting my account! You can never be too safe!" WHERE id = 10;
+UPDATE facebook_clone SET status = "I hear there are a lot of hackers on this app! I don't want to risk them getting my information so I'm deleting my account! You can never be too safe!" 
+WHERE id = 10;
 
 DELETE FROM facebook_clone WHERE id =  10;
 
