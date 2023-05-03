@@ -1,4 +1,4 @@
---Create a fake clothing store database
+--Create a clothing store database and write queries that answer business questions.
 
 CREATE TABLE clothing_store(id INTEGER PRIMARY KEY, item TEXT, quantity INTEGER, price INTEGER, aisle INTEGER);
 
