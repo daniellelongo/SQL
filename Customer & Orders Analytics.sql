@@ -1,7 +1,7 @@
 --SQL queries that quantify statistics about customer and order data. 
 
 --How many orders were placed in January? 
-SELECT COUNT(*) FROM BIT_DB.JanSales
+SELECT COUNT(*) FROM BIT_DB.JanSales;
 
 --How many of those orders were for an iPhone? 
 SELECT COUNT(*) FROM BIT_DB.JanSales 
@@ -15,7 +15,7 @@ ON customers.order_id = FebSales.orderID;
 --Which product was the cheapest one sold in January, and what was the price?
 SELECT DISTINCT product, MIN(price) FROM BIT_DB.JanSales
 GROUP BY product, price O
-RDER BY price ASC LIMIT 1
+RDER BY price ASC LIMIT 1;
 
 --What is the total revenue for each product sold in January?
 SELECT SUM(Quantity)*price AS total_revenue, Product FROM BIT_DB.JanSales
@@ -59,4 +59,4 @@ ON FebSales.orderID = customers.order_id;
 --Which product brought in the most revenue in January and how much revenue did it bring in total? 
 SELECT Product, SUM(Quantity*price) AS most_revenue FROM BIT_DB.JanSales 
 GROUP BY Product 
-ORDER BY SUM(Quantity*price) DESC LIMIT 1
+ORDER BY SUM(Quantity*price) DESC LIMIT 1;
