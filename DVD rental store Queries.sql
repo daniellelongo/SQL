@@ -1,4 +1,3 @@
--- These basis of these scenarios will be that I've been hired at as a SQL consultant at a DVD rental store. 
 -- The database being used mimics one that may exist for a DVD rental store with tables containing Customer info, Movie Info, Actor info, Staff info, Payment info etc.
 -- The prompts and resulting queries will reflect possible real life examples of what a SQL consultant may be asked to do in this work environment.
 
