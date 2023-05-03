@@ -1,4 +1,4 @@
---In this SQL code, I'm querying a database that's holding Furniture Store Transaction data to answer questions about the data. 
+--Query database holding Furniture Store Transaction data to answer business questions.
 
 --Top five countries with the highest number of transactions
 SELECT country, COUNT(transaction_date) AS number_of_transactions  FROM sales GROUP BY country ORDER BY COUNT(transaction_date) DESC LIMIT 5;
