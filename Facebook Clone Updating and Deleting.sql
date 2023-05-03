@@ -1,4 +1,4 @@
---Create a fake app that stores your data and lets you post updates and delete data.
+--Create a fake app that stores data and allows user to post updates and delete data.
 
 CREATE TABLE facebook_clone (id INTEGER PRIMARY KEY AUTOINCREMENT, fullname TEXT, age INTEGER, job TEXT,  relationship TEXT, status TEXT);
 INSERT INTO facebook_clone(fullname, age, job, relationship, status) VALUES ("John Doe", 16, "Student", "Single", "Weekend can't come quick enough!");
