@@ -24,7 +24,8 @@ WHERE actor.first_name = 'Nick'
 AND actor.last_name = 'Wahlberg';
 
 -- How many payments occurred on a Monday?
-SELECT COUNT(payment_id) FROM payment WHERE EXTRACT(DOW FROM payment_date) = 1;
+SELECT COUNT(payment_id) FROM payment 
+WHERE EXTRACT(DOW FROM payment_date) = 1;
 
 
 -- What customer has the highest customer ID number whose name starts with an 'E' and has an address ID lower than 500?
@@ -120,7 +121,8 @@ SELECT COUNT(title) FROM film
 WHERE title LIKE '%Truman%';
 
 -- We want to give a bonus to the staff member that processed the most payments. 
-SELECT staff_id, COUNT (payment_id) FROM payment GROUP BY staff_id
+SELECT staff_id, COUNT (payment_id) FROM payment 
+GROUP BY staff_id
 ORDER BY COUNT(payment_id) DESC LIMIT 1;
 
 -- Corporate HQ wants to see if there is a relationship between replacement cost of a movie and its rating.  
