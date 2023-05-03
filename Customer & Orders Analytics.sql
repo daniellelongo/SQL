@@ -14,8 +14,8 @@ ON customers.order_id = FebSales.orderID;
 
 --Which product was the cheapest one sold in January, and what was the price?
 SELECT DISTINCT product, MIN(price) FROM BIT_DB.JanSales
-GROUP BY product, price O
-RDER BY price ASC LIMIT 1;
+GROUP BY product, price 
+ORDER BY price ASC LIMIT 1;
 
 --What is the total revenue for each product sold in January?
 SELECT SUM(Quantity)*price AS total_revenue, Product FROM BIT_DB.JanSales
@@ -29,11 +29,13 @@ GROUP BY product;
 --How many customers ordered more than 2 products at a time, and what was the average amount spent for those customers? 
 SELECT count(acctnum), AVG(Quantity)*price FROM BIT_DB.FebSales 
 LEFT JOIN BIT_DB.customers 
-ON FebSales.orderID = customers.order_id WHERE Quantity > 2;
+ON FebSales.orderID = customers.order_id 
+WHERE Quantity > 2;
 
 --List all the products sold in Los Angeles in February, and include how many of each were sold.
 SELECT Product, SUM(Quantity) FROM BIT_DB.FebSales 
-WHERE location LIKE '%Los Angeles%' GROUP BY Product;
+WHERE location LIKE '%Los Angeles%' 
+GROUP BY Product;
 
 --Which locations in New York received at least 3 orders in January, and how many orders did they each receive?
 SELECT DISTINCT location, COUNT(orderID) FROM BIT_DB.JanSales
