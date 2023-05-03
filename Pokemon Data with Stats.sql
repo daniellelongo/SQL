@@ -1,4 +1,4 @@
---In this SQL code, I'm querying a database that contains Pokemon data to answer questions about the data. 
+--Query a database that contains Pokemon data to answer questions about the data. 
 
 
 --What is the highest, lowest and average total stats for ONLY legendary pokemon.
